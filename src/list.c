@@ -4,7 +4,7 @@
 #include <string.h>
 
 /*  Create the linked list */
-struct List* createList(void)
+struct List* CreateList(void)
 {
   struct List *head = malloc(sizeof(struct List));
   head->next = NULL;
@@ -14,22 +14,22 @@ struct List* createList(void)
 /*  Delete the linked list */
 void removeList(struct List *list)
 {
-  clearList(list);
+  ClearList(list);
   free(list);
   list = NULL;
 }
 
 /*  Add leaf by username */
-void addLeaf(const char *username, struct List *head)
+void AddLeaf(const char *username, struct List *head)
 {
-  struct List *leaf = createList();
+  struct List *leaf = CreateList();
   strcpy(leaf->username, username);
   leaf->next = head->next;
   head->next = leaf;
 }
 
 /*  Remove leaf by name */
-int removeLeafByName(const char *username, struct List *head)
+int RemoveLeafByName(const char *username, struct List *head)
 {
   struct List *currentLeaf = head->next;
   struct List *prevLeaf = head;
@@ -48,7 +48,7 @@ int removeLeafByName(const char *username, struct List *head)
 }
 
 /*  Clear the list */
-void clearList(struct List *head)
+void ClearList(struct List *head)
 {
   struct List **currentLeaf = &head->next;
   

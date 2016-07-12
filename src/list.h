@@ -8,16 +8,16 @@ struct List {
 };
 
 /*  Create the linked list */
-struct List* createList(void);
+struct List* CreateList(void);
 
 /*  Delete the linked list */
-void removeList(struct List *list);
+void RemoveList(struct List *list);
 
 /*  Add leaf by username */
-void addLeaf(const char *username, struct List *head);
+void AddLeaf(const char *username, struct List *head);
 
 /*  Remove leaf by name */
-int removeLeafByName(const char *username, struct List *head);
+int RemoveLeafByName(const char *username, struct List *head);
 
 /*  Clear the list */
-void clearList(struct List *head);
+void ClearList(struct List *head);

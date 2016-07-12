@@ -2,7 +2,7 @@
 
 static int queue_id;
 
-void openQueue(void)
+void OpenQueue(void)
 {
   int queue_key = ftok("/home/Alexander/Projects/SummerSchool/chat/server.c", 1);
   
@@ -49,7 +49,7 @@ void ReadAndSend(void)
 
 int main(void)
 {
-  openQueue();
+  OpenQueue();
   SendNickname();
   ReadAndSend();
   
