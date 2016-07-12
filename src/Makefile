@@ -1,6 +1,6 @@
 objects = server.o client.o list.o
 
-CFLAGS = -Wall -pedantic -ansi -g
+CFLAGS = -Wall -pedantic -ansi -g -std=c99
 
 targets = server client
 
