@@ -53,12 +53,13 @@ void StartReceiving(void)
     switch (message.type) {
       case 1:
         /*  New user connected */
-        AddLeaf(message.text, usernames);
+        /*  AddLeaf(message.text, usernames); */
+        usleep(1);
         SendMessage(&message);
         break;
       case 2:
         /*  User disconected */
-        RemoveLeafByName(message.text, usernames);
+        /*  RemoveLeafByName(message.text, usernames); */
         SendMessage(&message);
         /*  TODO: close fork() and send notification */
         break;
